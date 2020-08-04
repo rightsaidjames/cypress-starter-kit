@@ -8,7 +8,7 @@ A no-nonsense Cypress template for copying into new or existing projects, with s
 - A `cy.login()` [custom command](https://docs.cypress.io/api/cypress-api/custom-commands.html), making use of an `auth.json` [fixture](https://docs.cypress.io/api/commands/fixture.html).
 - Some example smoke tests for [the-internet.herokuapp.com](https://the-internet.herokuapp.com/) in the `sample-test.js` file, with inline documentation.
 - A `routes.js` file with examples, demonstrating how [cy.route()](https://docs.cypress.io/api/commands/route.html) can be used for conditional waits.
-- Empty `before()` and `beforeEach()` [Mocha hooks](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Hooks) in the `index.js` file. You could use these to run Cypress commands that run before
+- Empty `before()` and `beforeEach()` [Mocha hooks](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Hooks) in the `index.js` file. You could use these to run Cypress commands that run before each test run or at the start of every test.
 - A `tsconfig.json` file in the `/tests/cypress` folder that will provide Intellisense code completion in supported code editors.
 - A sample `package.json` file, for demonstrating the `cypress:open` and `cypress` scripts that can be triggered via `npm run`
 
@@ -36,7 +36,9 @@ A no-nonsense Cypress template for copying into new or existing projects, with s
 When working with user credentials, even on a non-production site, you should avoid committing them to Git/GitHub. Instead, you can distribute an `auth.json.dist` file with sensitive data removed, then share the necessary info via a password manager or another form of secure data store. Users can make a copy of the .dist file, rename it to `auth.json` then fill in the required values.
 
 To prevent yourself and others from committing sensitive data, you can add the relevant fixture files to your `.gitignore` file, like so:
-```tests/cypress/fixtures/auth.json```
+```
+tests/cypress/fixtures/auth.json
+```
 
 Sensitive data can also be populated using [Environment Variables](https://docs.cypress.io/guides/guides/environment-variables.html), then accessed using [Cypress.env()](https://docs.cypress.io/api/cypress-api/env.html#Syntax).
 
@@ -57,7 +59,7 @@ From there, add the following to the scripts section of your `package.json`:
 "cypress:open": "cypress open"
 ```
 
-This will allow you to launch the UI Test Runner using `npm run cypress:open` and the CLI Test Runner using `npm run cypress` (or their Yarn equivalents)
+This will allow you to launch the UI Test Runner using `npm run cypress:open` and the CLI Test Runner using `npm run cypress` (or their Yarn equivalents).
 
 That's it! If you need any help with any of the above, contact me on Twitter ([@RightSaidJames](https://twitter.com/rightsaidjames)) or find me on the [Ministry of Testing Slack](https://www.ministryoftesting.com/slack_invite). 
 
