@@ -6,3 +6,4 @@ tests/cypress/videos/
 
 # Files
 .DS_Store
+tests/cypress/fixtures/auth.json

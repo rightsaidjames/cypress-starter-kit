@@ -31,6 +31,15 @@ A no-nonsense Cypress template for copying into new or existing projects, with s
   -- Tests that are currently open in the UI Test Runner will automatically restart whenever a relevant file is modified, so you can see your tests pass or fail in real time.
 - You can also kick off a headless test run of the Sample test suite using `npx cypress run`.
 
+### Handling user credentials
+
+When working with user credentials, even on a non-production site, you should avoid committing them to Git/GitHub. Instead, you can distribute an `auth.json.dist` file with sensitive data removed, then share the necessary info via a password manager or another form of secure data store. Users can make a copy of the .dist file, rename it to `auth.json` then fill in the required values.
+
+To prevent yourself and others from committing sensitive data, you can add the relevant fixture files to your `.gitignore` file, like so:
+```tests/cypress/fixtures/auth.json```
+
+Sensitive data can also be populated using [Environment Variables](https://docs.cypress.io/guides/guides/environment-variables.html), then accessed using [Cypress.env()](https://docs.cypress.io/api/cypress-api/env.html#Syntax).
+
 ### Adding Cypress to your project
 
 To permanently add Cypress to a project that is already using npm or yarn, run _one_ of the following commands to install Cypress as a development dependency:
