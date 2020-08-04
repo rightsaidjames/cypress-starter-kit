@@ -4,7 +4,7 @@
 // cy.wait('@login').its('status').should('eql', '200')
 
 beforeEach(() => {
-  cy.server() // This command is required
+  cy.server() // This initial command is required to use routes
 
   // cy.route('GET', '/products?*').as('getProducts')
   // cy.route('POST', '/login').as('login')

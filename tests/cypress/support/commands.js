@@ -25,10 +25,13 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('login', (user, password) => {
+  
   // Replace with your app's login page URL
   // or use cy.get('#my-account-button').click() command (or similar) to open a login modal
   cy.visit('/login')
+
   cy.get('input[name="username"]').type(user)
   cy.get('input[name="password"]').type(password)
-  cy.get('form').submit()
+
+  cy.get('form#login').submit()
 })

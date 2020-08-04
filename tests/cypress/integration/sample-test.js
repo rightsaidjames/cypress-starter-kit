@@ -1,12 +1,12 @@
 describe('Sample Tests', () => {
-  it('Loads the homepage', () => {
+  it('loads the homepage', () => {
     cy.visit('/')
-    cy.get('h1').contains('Welcome to the-internet')
-    cy.get('ul li a').its('length').should('be.at.least', 44)
+    cy.get('h1').contains('Welcome to the-internet') // Implicit assertion
+    cy.get('ul li a').its('length').should('be.at.least', 44) // Explicit assertion
   })
 
   it('can login', () => {
-    cy.fixture('auth').then((auth) => {
+    cy.fixture('auth').then((auth) => { // Retrieve auth.json fixture from fixtures folder
       cy.login(auth.testUser, auth.testPass)
     })
     // cy.getCookie('session').should('exist')
