@@ -23,12 +23,12 @@ A no-nonsense Cypress template for copying into new or existing projects, with s
 
 - Copy the `cypress.json` file into your project's root directory.
 - Copy over the `/tests/` directory, or just the enclosed `/tests/cypress/` directory if you already have a tests directory.
-  -- (If you decide to put the `cypress/` directory somewhere other than `/tests/`, adjust the relevant `cypress.json` values accordingly.
+  - (If you decide to put the `cypress/` directory somewhere other than `/tests/`, adjust the relevant `cypress.json` values accordingly.
 - Browse to your project's root directory from the command line, then run `npx cypress open` to download Cypress to your machine and start the UI Test Runner.
-  -- Select `sample-test.js` from the list of tests, then watch them run and (hopefully!) pass
-  -- You can stop the UI Test Runner simply by closing its window(s), or by typing `Ctrl + C` at the command line.
+  - Select `sample-test.js` from the list of tests, then watch them run and (hopefully!) pass
+  - You can stop the UI Test Runner simply by closing its window(s), or by typing `Ctrl + C` at the command line.
 - Update the `baseUrl` in `cypress.json` to your project's local/integration environment, then start [writing tests](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html)!
-  -- Tests that are currently open in the UI Test Runner will automatically restart whenever a relevant file is modified, so you can see your tests pass or fail in real time.
+  - Tests that are currently open in the UI Test Runner will automatically restart whenever a relevant file is modified, so you can see your tests pass or fail in real time.
 - You can also kick off a headless test run of the Sample test suite using `npx cypress run`.
 
 ### Handling user credentials
