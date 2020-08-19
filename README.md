@@ -10,7 +10,8 @@ A no-nonsense Cypress template for copying into new or existing projects, with s
 - A `routes.js` file with examples, demonstrating how [cy.route()](https://docs.cypress.io/api/commands/route.html) can be used for conditional waits.
 - Empty `before()` and `beforeEach()` [Mocha hooks](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Hooks) in the `index.js` file. You could use these to run Cypress commands that run before each test run or at the start of every test.
 - A `tsconfig.json` file in the `/tests/cypress` folder that will provide Intellisense code completion in supported code editors.
-- A sample `package.json` file, for demonstrating the `cypress:open` and `cypress` scripts that can be triggered via `npm run`
+- A sample `package.json` file, for demonstrating the `cypress:open` and `cypress` scripts that can be triggered via `npm run`.
+- A sample GitHub Actions workflow that installs Cypress and runs the tests.
 
 ## Pre-requisites
 
@@ -51,7 +52,7 @@ npm install cypress --save-dev
 yarn add cypress -D
 ```
 
-If the project does not have a package.json, you will first need to run `npm init` or `yarn init`
+If the project does not have a package.json, you will first need to run `npm init` or `yarn init`.
 
 From there, add the following to the scripts section of your `package.json`:
 ```
