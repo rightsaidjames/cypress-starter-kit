@@ -10,15 +10,13 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
+  cypress-run:
+    runs-on: ubuntu-16.04
+    # Cypress Docker image with Chrome v83
+    # and Firefox v77 pre-installed
+    container: cypress/browsers:node12.18.0-chrome83-ff77
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup Node.js 12.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12.x
-    - run: npm install
-    - run: npm run cypress
+      - uses: actions/checkout@v1
+      - uses: cypress-io/github-action@v2
+        with:
+          browser: chrome
