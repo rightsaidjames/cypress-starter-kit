@@ -5,6 +5,7 @@ A no-nonsense Cypress template for copying into new or existing projects, with s
 ## What's included
 
 - A sample `cypress.json` file and associated folder structure.
+-- The `"chromeWebSecurity"` property has been set to `false` so that example tests do not fail due to CORS policy for third party analytics. It may not be needed for your project. Note also that this setting has no effect in Firefox, so your tests may fail in Firefox if they rely upon this setting.
 - A `cy.login()` [custom command](https://docs.cypress.io/api/cypress-api/custom-commands.html), making use of an `auth.json` [fixture](https://docs.cypress.io/api/commands/fixture.html).
 - Some example smoke tests for [the-internet.herokuapp.com](https://the-internet.herokuapp.com/) in the `sample-test.js` file, with inline documentation.
 - A `routes.js` file with examples, demonstrating how [cy.route()](https://docs.cypress.io/api/commands/route.html) can be used for conditional waits.
@@ -61,6 +62,8 @@ From there, add the following to the scripts section of your `package.json`:
 ```
 
 This will allow you to launch the UI Test Runner using `npm run cypress:open` and the CLI Test Runner using `npm run cypress` (or their Yarn equivalents).
+
+When a new version of Cypress becomes available, you can update it within your repo using `npm install --save-dev cypress@x.y.z`, where `x.y.z` is the version of Cypress (e.g. `6.4.0`) you want to install.
 
 That's it! If you need any help with any of the above, contact me on Twitter ([@RightSaidJames](https://twitter.com/rightsaidjames)) or find me on the [Ministry of Testing Slack](https://www.ministryoftesting.com/slack_invite). 
 
