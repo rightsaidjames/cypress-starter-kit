@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "cypress-starter-kit",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -17,9 +17,9 @@
   "keywords": [
     ""
   ],
-  "author": "",
-  "license": "",
+  "author": "James Sheasby Thomas (@RightSaidJames)",
+  "license": "MIT",
   "devDependencies": {
-    "cypress": "^4.11.0"
+    "cypress": "^6.4.0"
   }
 }
