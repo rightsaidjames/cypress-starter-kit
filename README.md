@@ -5,7 +5,7 @@ A no-nonsense Cypress template for copying into new or existing projects, with s
 ## What's included
 
 - A sample `cypress.json` file and associated folder structure.
-- - The `"chromeWebSecurity"` property has been set to `false` so that example tests do not fail due to CORS policy for third party analytics. It may not be needed for your project. Note also that this setting has no effect in Firefox, so your tests may fail in Firefox if they rely upon this setting.
+  - The `"chromeWebSecurity"` property has been set to `false` so that example tests do not fail due to CORS policy for third party analytics. It may not be needed for your project. Note also that this setting has no effect in Firefox, so your tests may fail in Firefox if they rely upon this setting.
 - A `cy.login()` [custom command](https://docs.cypress.io/api/cypress-api/custom-commands.html), making use of an `auth.json` [fixture](https://docs.cypress.io/api/commands/fixture.html).
 - Some example smoke tests for [the-internet.herokuapp.com](https://the-internet.herokuapp.com/) in the `sample-test.js` file, with inline documentation.
 - A `routes.js` file with examples, demonstrating how [cy.route()](https://docs.cypress.io/api/commands/route.html) can be used for conditional waits.
