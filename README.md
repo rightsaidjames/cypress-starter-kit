@@ -7,8 +7,9 @@ A no-nonsense Cypress template for copying into new or existing projects, with s
 - A sample `cypress.json` file and associated folder structure.
   - The `"chromeWebSecurity"` property has been set to `false` so that example tests do not fail due to CORS policy for third party analytics. It may not be needed for your project. Note also that this setting has no effect in Firefox, so your tests may fail in Firefox if they rely upon this setting.
 - A `cy.login()` [custom command](https://docs.cypress.io/api/cypress-api/custom-commands.html), making use of an `auth.json` [fixture](https://docs.cypress.io/api/commands/fixture.html).
+- A `cy.viewportPreset()` custom command by [Cameronjpr](https://github.com/Cameronjpr) that extends the [cy.viewport()](https://docs.cypress.io/api/commands/viewport) command to add additional viewport presets.
 - Some example smoke tests for [the-internet.herokuapp.com](https://the-internet.herokuapp.com/) in the `sample-test.js` file, with inline documentation.
-- A `routes.js` file with examples, demonstrating how [cy.route()](https://docs.cypress.io/api/commands/route.html) can be used for conditional waits.
+- A `routes.js` file with examples, demonstrating how [cy.intercept()](https://docs.cypress.io/api/commands/intercept.html) can be used for conditional waits.
 - Empty `before()` and `beforeEach()` [Mocha hooks](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Hooks) in the `index.js` file. You could use these to run Cypress commands that run before each test run or at the start of every test.
 - A `tsconfig.json` file in the `/tests/cypress` folder that will provide Intellisense code completion in supported code editors.
 - A sample `package.json` file, for demonstrating the `cypress:open` and `cypress` scripts that can be triggered via `npm run`.
@@ -63,7 +64,7 @@ From there, add the following to the scripts section of your `package.json`:
 
 This will allow you to launch the UI Test Runner using `npm run cypress:open` and the CLI Test Runner using `npm run cypress` (or their Yarn equivalents).
 
-When a new version of Cypress becomes available, you can update it within your repo using `npm install --save-dev cypress@x.y.z`, where `x.y.z` is the version of Cypress (e.g. `6.4.0`) you want to install.
+When a new version of Cypress becomes available, you can update it within your repo using `npm install --save-dev cypress@x.y.z`, where `x.y.z` is the version of Cypress (e.g. `6.8.0`) you want to install.
 
 That's it! If you need any help with any of the above, contact me on Twitter ([@RightSaidJames](https://twitter.com/rightsaidjames)) or find me on the [Ministry of Testing Slack](https://www.ministryoftesting.com/slack_invite). 
 
