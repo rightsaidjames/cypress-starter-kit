@@ -1,6 +1,6 @@
 # Cypress Starter Kit
 
-A no-nonsense Cypress template for copying into new or existing projects, with some sensible defaults and useful helper functions.
+Test edit - A no-nonsense Cypress template for copying into new or existing projects, with some sensible defaults and useful helper functions.
 
 ## What's included
 
