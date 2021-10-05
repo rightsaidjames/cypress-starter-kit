@@ -1,0 +1,32 @@
+stages:
+  - test
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - .npm/
+
+.test:
+  image: cypress/browsers:node14.17.0-chrome91-ff89
+  stage: test
+  before_script:
+    - npm ci
+  artifacts:
+    when: always
+    paths:
+      - cypress/videos/**/*.mp4
+      - cypress/screenshots/**/*.png
+    expire_in: 1 day
+
+test_chrome:
+  extends: .test
+  script:
+    - npm run start:ci &
+    - npx cypress run
+
+test_firefox:
+  extends: .test
+  script:
+    - npm run start:ci &
+    - npx cypress run --browser firefox
