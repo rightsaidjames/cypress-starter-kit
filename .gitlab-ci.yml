@@ -15,8 +15,8 @@ cache:
   artifacts:
     when: always
     paths:
-      - cypress/videos/**/*.mp4
-      - cypress/screenshots/**/*.png
+      - tests/cypress/videos/**/*.mp4
+      - tests/cypress/screenshots/**/*.png
     expire_in: 1 day
 
 test_chrome:
