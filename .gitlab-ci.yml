@@ -22,11 +22,8 @@ cache:
 test_chrome:
   extends: .test
   script:
-    - npm run start:ci &
     - npx cypress run
 
 test_firefox:
   extends: .test
-  script:
-    - npm run start:ci &
     - npx cypress run --browser firefox
