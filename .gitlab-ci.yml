@@ -26,4 +26,5 @@ test_chrome:
 
 test_firefox:
   extends: .test
+  script:
     - npx cypress run --browser firefox
