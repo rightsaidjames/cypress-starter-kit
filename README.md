@@ -14,11 +14,12 @@ A no-nonsense Cypress template for copying into new or existing projects, with s
 - A `tsconfig.json` file in the `/tests/cypress` folder that will provide Intellisense code completion in supported code editors.
 - A sample `package.json` file, for demonstrating the `cypress:open` and `cypress` scripts that can be triggered via `npm run`.
 - A sample GitHub Actions workflow that installs Cypress and runs the tests.
+- A sample `gitlab-ci.yml` file that tells the [GitLab mirror of this repo](https://gitlab.com/james.sheasby.thomas/cypress-starter-kit) to install Cypress and run the tests via Firefox and Chrome via a [GitLab CI Pipeline](https://docs.gitlab.com/ee/ci/pipelines/). You can see the latest GitLab CI runs for this repo from its [Pipelines dashboard](https://gitlab.com/james.sheasby.thomas/cypress-starter-kit/-/pipelines).
 
 ## Pre-requisites
 
 - A recent version of [Node.js](https://nodejs.org/en/), installed via the official installer or the package manager of your choice.
-- [Git](https://git-scm.com/), if you're a Windows user and haven't already installed it.
+- [Git](https://git-scm.com/), if you're a Windows user and haven't already installed it. Mac users can install Git and other basic command line tools using the `xcode-select --install` command, and update these to newer/better versions using [Homebrew](https://brew.sh/).
 - A local copy of your project's Git repository. If you don't have an actual project to work with, make a new folder called `cypress-playground` or similar.
 - (Optional) A code editor that supports [Intellisense code completion](https://docs.cypress.io/guides/tooling/IDE-integration.html#Intelligent-Code-Completion), such as [VS Code](https://code.visualstudio.com/).
 
@@ -64,7 +65,7 @@ From there, add the following to the scripts section of your `package.json`:
 
 This will allow you to launch the UI Test Runner using `npm run cypress:open` and the CLI Test Runner using `npm run cypress` (or their Yarn equivalents).
 
-When a new version of Cypress becomes available, you can update it within your repo using `npm install --save-dev cypress@x.y.z`, where `x.y.z` is the version of Cypress (e.g. `6.8.0`) you want to install.
+When a new version of Cypress becomes available, you can update it within your repo using `npm install --save-dev cypress@x.y.z` or `yarn upgrade cypress@x.y.z`, where `x.y.z` is the version of Cypress (e.g. `6.8.0`) you want to install.
 
 That's it! If you need any help with any of the above, contact me on Twitter ([@RightSaidJames](https://twitter.com/rightsaidjames)) or find me on the [Ministry of Testing Slack](https://www.ministryoftesting.com/slack_invite). 
 
@@ -77,4 +78,4 @@ Contributions to this repository are warmly welcomed, especially:
 - Improvements to inline documentation 
 - Additional example tests and custom commands
 
-If in doubt, raise an issue first and I'll respond as soon as I can.
+If in doubt, raise an [issue](https://github.com/rightsaidjames/cypress-starter-kit/issues) or start a [discussion](https://github.com/rightsaidjames/cypress-starter-kit/discussions) and I'll respond as soon as I can.
