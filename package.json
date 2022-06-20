@@ -1,14 +1,14 @@
 {
   "name": "cypress-starter-kit",
-  "version": "0.0.1",
+  "version": "10.1.0",
   "description": "",
   "main": "index.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "cypress": "cypress run",
-    "cypress:open": "cypress open"
+    "cypress": "cypress run --e2e",
+    "cypress:open": "cypress open --e2e"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,6 @@
   "author": "James Sheasby Thomas (@RightSaidJames)",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^9.7.0"
+    "cypress": "^10.1.0"
   }
 }

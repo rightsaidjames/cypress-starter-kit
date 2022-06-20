@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "allowJs": true,
-        "baseUrl": "../../node_modules",
+        "baseUrl": "../node_modules",
         "types": [
             "cypress"
         ],
@@ -11,6 +11,6 @@
         "**/*.*"
     ],
     "exclude": [
-        "../../node_modules/**"
+        "../node_modules/**"
     ]
 }
