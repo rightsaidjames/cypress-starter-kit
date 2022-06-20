@@ -5,12 +5,12 @@ A no-nonsense Cypress template for copying into new or existing projects, with s
 ## What's included
 
 - A sample `cypress.config.js` file and associated folder structure.
-  - The `"chromeWebSecurity"` property has been set to `false` so that example tests do not fail due to CORS policy for third party analytics. It may not be needed for your project. Note also that this setting has no effect in Firefox, so your tests may fail in Firefox if they rely upon this setting.
+  - The `chromeWebSecurity` property has been set to `false` so that example tests do not fail due to CORS policy for third party analytics. It may not be needed for your project. Note also that this setting has no effect in Firefox, so your tests may fail in Firefox if they rely upon this setting.
 - A `cy.login()` [custom command](https://docs.cypress.io/api/cypress-api/custom-commands.html), making use of an `auth.json` [fixture](https://docs.cypress.io/api/commands/fixture.html).
 - A `cy.viewportPreset()` custom command by [Cameronjpr](https://github.com/Cameronjpr) that extends the [cy.viewport()](https://docs.cypress.io/api/commands/viewport) command to add additional viewport presets.
-- Some example smoke tests for [the-internet.herokuapp.com](https://the-internet.herokuapp.com/) in the `sample-test.js` file, with inline documentation.
+- Some example smoke tests for [the-internet.herokuapp.com](https://the-internet.herokuapp.com/) in the `sample-test.cy.js` file, with inline documentation.
 - A `routes.js` file with examples, demonstrating how [cy.intercept()](https://docs.cypress.io/api/commands/intercept.html) can be used for conditional waits.
-- Empty `before()` and `beforeEach()` [Mocha hooks](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Hooks) in the `index.js` file. You could use these to run Cypress commands that run before each test run or at the start of every test.
+- Empty `before()` and `beforeEach()` [Mocha hooks](https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Hooks) in the `cypress/support/index.js` file. You could use these to run Cypress commands that run before each test run or at the start of every test.
 - A `tsconfig.json` file in the `cypress/` directory that will provide Intellisense code completion in supported code editors.
 - A sample `package.json` file, for demonstrating the `cypress:open` and `cypress` scripts that can be triggered via `npm run`.
 - A sample GitHub Actions workflow that installs Cypress and runs the tests.
