@@ -8,23 +8,23 @@ cache:
     - .npm/
 
 .test:
-  image: cypress/browsers:node14.17.0-chrome91-ff89
+  image: cypress/browsers:node14.19.0-chrome100-ff99-edge
   stage: test
   before_script:
     - npm ci
   artifacts:
     when: always
     paths:
-      - tests/cypress/videos/**/*.mp4
-      - tests/cypress/screenshots/**/*.png
+      - cypress/videos/**/*.mp4
+      - cypress/screenshots/**/*.png
     expire_in: 1 day
 
 test_chrome:
   extends: .test
   script:
-    - npx cypress run
+    - npx cypress run --e2e --browser chrome
 
 test_firefox:
   extends: .test
   script:
-    - npx cypress run --browser firefox
+    - npx cypress run --e2e --browser firefox
