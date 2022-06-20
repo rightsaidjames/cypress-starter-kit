@@ -14,7 +14,7 @@ jobs:
     container: cypress/browsers:node14.19.0-chrome100-ff99-edge
     steps:
       - uses: actions/checkout@v1
-      - uses: cypress-io/github-action@v2
+      - uses: cypress-io/github-action@v4
         with:
           browser: chrome
       - uses: actions/upload-artifact@v1
