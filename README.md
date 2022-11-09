@@ -32,7 +32,7 @@ A no-nonsense Cypress template for copying into new or existing projects, with s
   - If you don't intend to use [Component Testing](https://docs.cypress.io/guides/component-testing/writing-your-first-component-test), you can jump straight [End-to-end testing mode](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test) by setting the `--e2e` and `--browser` command line options, e.g. `npx cypress open --e2e --browser chrome`
   - Select `sample-test.cy.js` from the list of tests, then watch them run and (hopefully!) pass.
   - You can stop the UI Test Runner simply by closing its window(s), or by typing `Ctrl + C` at the command line.
-- Update the `baseUrl` in `cypress.json` to your project's local/integration environment, then start [writing tests](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html)!
+- Update the `baseUrl` in `cypress.config.js` to your project's local/integration environment, then start [writing tests](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html)!
   - Tests that are currently open in the UI Test Runner will automatically restart whenever a relevant file is modified, so you can see your tests pass or fail in real time.
 - You can also kick off a headless test run of the Sample test suite using `npx cypress run`.
 
