@@ -20,6 +20,6 @@
   "author": "James Sheasby Thomas (@RightSaidJames)",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^11.0.0"
+    "cypress": "^14.5.2"
   }
 }
